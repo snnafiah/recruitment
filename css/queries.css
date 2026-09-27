@@ -247,7 +247,7 @@
     }
 
     .hero .content h1 {
-        font-size: 28px;
+        font-size: 30px;
         margin-bottom: 1.2rem;
     }
 
@@ -261,9 +261,9 @@
         font-size: 12px;
     }
 
-    .card {
-        flex: 0 0 50%;
-    }
+   .careers-grid {
+    padding-bottom: 15px;
+   }
 
     .footer-bottom .muted {
         font-size: 95%;

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Thanks Page</title>
+    <style>
+        /* Menghilangkan margin bawaan browser */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Mengatur wadah utama agar semua elemen ke tengah */
+        .thanks-container {
+            display: flex;             /* Mengaktifkan Flexbox */
+            flex-direction: column;    /* Menyusun elemen dari atas ke bawah */
+            justify-content: center;   /* Menengahkan secara vertikal */
+            align-items: center;       /* Menengahkan secara horizontal */
+            min-height: 100vh;         /* Memenuhi tinggi layar */
+            text-align: center;        /* Teks rata tengah */
+        }
+
+        /* Mengatur ukuran gambar agar lebih kecil */
+        .thanks-container img {
+            max-width: 250px;          /* Ubah angka 250px ini jika ingin lebih besar/kecil */
+            height: auto;              /* Menjaga proporsi gambar */
+            margin: 20px 0;            /* Memberi jarak atas dan bawah pada gambar */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Semua elemen dibungkus dalam satu div container -->
+    <div class="thanks-container">
+        <h1>thanks for ya attention</h1>
+        <img src="img/thanks.jpg" alt="Thanks Image">
+        <p><a href="index.html">back to the page</a></p>
+    </div>
+
+</body>
+</html>

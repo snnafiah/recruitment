@@ -1,0 +1,289 @@
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 18rem;
+        height: 100vh;
+        background-color: white; 
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+    
+    /* hero */
+    .hero .content {
+        padding: 8rem 20px 0; /* lebih tinggi dari header biar gak ketutupan */
+    }
+
+    .hero .content h1 {
+        font-size: 42px;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero .content p {
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+
+    .hero .content .cta {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+        
+
+    /*Careers*/
+    .careers {
+    padding: 3% 3%;
+    }
+
+    .careers-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 6%;
+    }
+
+    .careers-search {
+        width: 100%;
+    }
+
+    .careers-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding: 0 16px 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .careers-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .job-card {
+        flex: 0 0 82vw;   /* dari 55vw, biar 1 card kelihatan penuh + dikit intip card sebelahnya */
+        scroll-snap-align: start;
+    }
+    .job-desc {
+        font-size: 12px;
+    }
+    
+
+    .slide-btn {
+        top: 20%;         /* pindah ke area gambar, bukan nutupin judul */
+        width: 32px;
+        height: 32px;
+    }
+
+    .slide-btn.next {
+        right: 4px;
+    }
+
+    .slide-btn.prev {
+        left: 4px;
+    }
+    
+    .desc-text h2 {
+        font-size: 38px;
+    }
+    
+    .desc-text p {
+        font-size: 14px;
+    }
+
+
+
+    /*Footer*/
+    .footer-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 7% 3% 0%;
+    }
+
+    .footer-logo {
+        grid-column: 1 / -1;                 /* logo selebar penuh di atas */
+    }
+
+    .footer-logo img {
+        height: 30px;
+    }
+
+    .footer-links {
+        gap: 18px;
+    }
+
+    .contact-item {
+        margin-bottom: 14px;
+    }
+    .footer-social a {
+        display: inline-block;
+        padding-right: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 18px 3%;
+    }
+
+    .footer-bottom .muted {
+        display: block;
+        margin-left: 0;
+        margin-top: 0;
+        line-height: 5px;
+    }
+
+    /*Page Mardev*/
+    .description {
+        min-height: 80vh;
+        padding-top: 70px;
+    }
+
+    .mardev-image img {
+        object-position: 30% center;
+    }
+
+    .mardev-image::after {
+        background: linear-gradient(
+            0deg,                            /* dari bawah ke atas, tadinya 180deg */
+            #2b2d22 0%,
+            #2b2d22 30%,                     /* solid pendek di bawah biar foto lebih kelihatan */
+            rgba(43, 45, 34, 0.5) 55%,
+            rgba(43, 45, 34, 0.85) 80%,
+            #2b2d22 100%                     /* solid lagi di atas, dekat teks */
+        );
+    }
+
+
+    .desc-text {
+        max-width: 100%;
+        padding: 32px 3% 2%;
+        margin-top: 200px;
+    }
+
+    .desc-text p {
+        font-size: 14px;
+    }
+
+    .key-resp-grid {
+        grid-template-columns: 1fr;      /* Key Resp dan What We're Looking For jadi 1 kolom, atas-bawah */
+        gap: 32px;
+        padding-top: 3%;
+    }
+
+    .resp-cards {
+        display: flex;                   /* ganti dari grid ke flex, supaya tiap card selebar penuh */
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .resp-card {
+        display: flex;
+        width: 100%;                     /* card memanjang penuh ke samping */
+        flex-wrap: wrap;             /* supaya p bisa turun ke baris baru */
+        align-items: center;
+        column-gap: 10px;
+        padding: 14px 16px;
+        flex-direction: row;
+    }
+
+    .resp-num {
+        margin-bottom: 0;
+        order: 1;
+        flex-shrink: 0;
+    }
+
+    .resp-card h4 {
+        margin-bottom: -2px;
+        order: 2;
+        font-size: 14px;
+    }
+
+    .resp-card p {
+        order: 3;
+        flex-basis: 100%;            /* paksa turun ke baris baru, lebar penuh */
+        width: 100%;
+        margin-top: 6px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .req-side ul {
+        padding: 0 5%;                /* beri jarak dari tepi layar */
+}
+}   
+
+/* Mobile */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    .hero .content {
+        padding: 12rem 12px 0; /* lebih tinggi dari header biar gak ketutupan */
+    }
+
+    .hero .content h1 {
+        font-size: 28px;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero .content p {
+        font-size: 14px;
+        margin-bottom: 1rem;
+    }
+
+    .hero .content .cta {
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+
+    .card {
+        flex: 0 0 50%;
+    }
+
+    .footer-bottom .muted {
+        font-size: 95%;
+        max-width: 100%;
+    }
+
+
+    .disclaimer-content {
+        flex-direction: column;   /* teks & tombol jadi tumpuk vertikal, bukan sejajar */
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .disclaimer-content p {
+        min-width: 100%;
+        font-size: 13px;
+        text-align: justify;  
+    }
+
+    .disclaimer-content button {
+        width: 100%;              /* tombol full-width biar gampang di-tap */
+    }
+}

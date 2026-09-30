@@ -1,0 +1,269 @@
+
+/* Hero */
+.hero0  {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../img/thumbnail.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: -7rem;
+}
+
+.hero0::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    max-height: 100%;
+    background: 
+    linear-gradient(
+        90deg,
+        #2b2d22 0%,
+        #2b2d22 55%,                     /* tadinya 45%, area hijau solid lebih luas */
+        rgba(43, 45, 34, 0.55) 75%,      /* tadinya 65% */
+        rgba(43, 45, 34, 0.15) 100%
+    );
+}
+
+
+/* Teks judul + paragraf */
+.slogan {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 3% 24px;
+    max-width: 65rem;
+    color: white;
+    margin-top: 50px;
+
+}
+
+
+
+.hero0 .slogan h2 {
+    font-size: 48px;
+    margin: 0px 0px 8px;
+    font-weight: 500;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: white;
+    padding-top: 0rem
+}
+
+.hero0 .slogan p {
+    font-size: 18px;
+    margin: 0px 0px 5px;
+    line-height: 1.6;
+    color: #dcdad8;
+
+}
+
+.hero0 .slogan .cta {
+    margin-top: 1.5rem;
+    padding: 14px 24px;
+    max-width: 200px;
+    font-size: 14px;
+    color: var(--primary);
+    background-color: #dad7d8;
+    border-radius: 0.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* Products */
+.products {
+    padding: 11rem  3% 4rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.products h2 {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.products .subtitle {
+    font-size: 18px;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.gall {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);   /* 5 kolom sama lebar */
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 330px;
+    background-color: #f0f0f0;
+    color: #2c2826;
+    overflow: hidden;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card img {
+    position: absolute;
+    bottom: 70px;                 /* di atas label, sesuaikan dengan tinggi label */
+    left: 24px;                   /* sejajar dengan teks label */
+    transform: none;              /* hapus translateX(-50%) yang tadi */
+    top: auto;                    /* hapus top: 20px */
+    height: 65%;
+    max-width: 80%;
+    object-fit: contain;
+    object-position: left bottom;
+}
+
+.card-label {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Hover */
+.card:hover {
+    background-color: #dfe3d8;
+    color: var(--primary);
+}
+
+/* About */
+.about0 {
+    position: relative;                  /* patokan posisi gambar produk */
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;    /* kiri lebih lebar, kanan lebih sempit */
+    min-height: 480px;
+    scroll-margin-top: 100px;
+}
+
+/* Kiri: teks */
+.about0-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 48px 5%;
+    background: linear-gradient(90deg, #3a3330 0%, #0f0d0c 100%);
+    color: white;
+}
+
+.about0-label {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a8a5a3;
+    margin-bottom: 16px;
+}
+
+.about0-text h2 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    color: #dad7d8;
+    max-width: 55rem; 
+}
+
+.about0-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 50rem;                    /* dibatasi supaya tidak tertimpa produk */
+    color: #c9c6c4;
+}
+
+.btn-out {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 24px;
+    padding: 14px 24px;
+    border: 1px solid #a8a5a3;
+    background: transparent;
+    color: #dad7d8;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0.2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-out:hover {
+    background-color: #dad7d8;
+    color: #000;
+}
+
+.about0-image {
+    background:
+        linear-gradient(rgba(40, 20, 10, 0.45), rgba(40, 20, 10, 0.45)),
+        url("../img/about-bg.avif") left center / cover no-repeat;
+    height: 100%;
+}
+
+/* Produk: layer paling depan, menyeberang ke panel hitam */
+.about0-image img {
+    position: absolute;
+    bottom: 2%;
+    right: 6%;
+    width: 42%;
+    height: auto;
+    z-index: 2;
+    display: block;
+}
+
+/* ParagonCorp */
+.try {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 64px 3%;
+    text-align: center;
+}
+
+.try h2 {
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #2c2826;
+    margin-bottom: 14px;
+}
+
+.try p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 0 auto 28px;                 /* auto kiri-kanan supaya paragraf tetap di tengah */
+    color: #2c2826;
+}
+
+.btn-solid {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: #525f4c;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+    border-radius: 0.2rem;
+}
+
+.btn-solid:hover {
+    background-color: var(--primary);
+}
+

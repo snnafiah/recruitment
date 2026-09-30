@@ -523,3 +523,18 @@ o
         font-size: 14px;
     }
 }
+
+
+   .vision-img,
+   .vision-text { min-width: 0; }
+
+   .vision-img img {
+       width: 100%;
+       max-width: 100%;
+       height: auto;
+       display: block;
+   }
+
+   @media (max-width: 758px) {
+       .vision { grid-template-columns: minmax(0, 1fr); }
+   }

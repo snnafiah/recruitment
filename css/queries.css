@@ -284,6 +284,11 @@ o
         background: linear-gradient(180deg, #4a4340 0%, #0d0a09 100%);
     }
 
+    .vision {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
 }   
 
 @media (min-width: 481px) and (max-width: 768px) {

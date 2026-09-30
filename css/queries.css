@@ -235,6 +235,55 @@
         padding: 0 5%;                /* beri jarak dari tepi layar */
     }
 
+    
+    /* home */
+    .gall {
+        display: flex;
+        overflow-x: auto;
+        gap: 16px;
+        scroll-snap-type: x mandatory;     /* berhenti pas di tiap kartu */
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 12px;
+    }
+
+    .card {
+        flex: 0 0 45%;                 /* lebar tiap kartu */
+        height: 280px;
+        scroll-snap-align: start;
+    }
+o
+    .card img {
+        height: 50%;
+    }
+
+    .card-label {
+        font-size: 17.5px;
+    }
+    
+    /* About */
+    .about0 {
+        grid-template-columns: 1fr;
+    }
+
+    .about0-image {
+        order: -1;
+        height: 260px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .about0-image img {
+        position: static;
+        width: auto;
+        height: 90%;
+    }
+
+    .about0-text {
+        padding: 32px 3%;
+        background: linear-gradient(180deg, #4a4340 0%, #0d0a09 100%);
+    }
+
 }   
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -389,55 +438,6 @@
         font-size: 10px;
         padding: 4px 10px;
     }
-
-    /* home */
-    .gall {
-        display: flex;
-        overflow-x: auto;
-        gap: 16px;
-        scroll-snap-type: x mandatory;     /* berhenti pas di tiap kartu */
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 12px;
-    }
-
-    .card {
-        flex: 0 0 45%;                 /* lebar tiap kartu */
-        height: 280px;
-        scroll-snap-align: start;
-    }
-o
-    .card img {
-        height: 50%;
-    }
-
-    .card-label {
-        font-size: 17.5px;
-    }
-    
-    /* About */
-    .about0 {
-        grid-template-columns: 1fr;
-    }
-
-    .about0-image {
-        order: -1;
-        height: 260px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-    }
-
-    .about0-image img {
-        position: static;
-        width: auto;
-        height: 90%;
-    }
-
-    .about0-text {
-        padding: 32px 3%;
-        background: linear-gradient(180deg, #4a4340 0%, #0d0a09 100%);
-    }
-
 
 }
 
